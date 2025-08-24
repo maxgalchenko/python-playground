@@ -1,6 +1,7 @@
 # 🐍 Python Playground
 
-Welcome to my Python learning and experimentation repository! This is a space where I explore Python concepts, experiment with libraries, build small projects, and document my learning journey.
+
+Enter package # to add, or the complete package name if it is not listed []:
 
 ## 🎯 Purpose
 
