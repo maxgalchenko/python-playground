@@ -2,9 +2,7 @@
 name = "python-playground"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "rainspistols",email = "galchenko.maksym@gmail.com"}
-]
+authors = [{ name = "rainspistols", email = "galchenko.maksym@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -17,9 +15,11 @@ dependencies = [
     "matplotlib (>=3.10.5,<4.0.0)",
     "datetime (>=5.5,<6.0)",
     "scipy (>=1.16.1,<2.0.0)",
-    "statsmodels (>=0.14.5,<0.15.0)"
+    "statsmodels (>=0.14.5,<0.15.0)",
 ]
 
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
