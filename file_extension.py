@@ -3,13 +3,20 @@ print(filename)
 
 print(filename.removesuffix(".txt"))
 
-user_input = int(input())
-cost = 0
-if user_input <= 12:
-    price = 8
-elif user_input <= 64:
-    price = 12
-else:
-    price = 10
 
-print(f"Price is ${price}")
+# for number in range(0,10)\
+count_list = list(range(10, -1, -1))
+# print(count_list)
+
+# for number in count_list:
+#     print(f"Current number is {number}")
+#     if number == 5:
+#         print('"Halfway point reached!"')
+
+
+counter = 10
+while counter >= 0:
+    print(f"Current number is {counter}")
+    if counter == 5:
+        print('"Halfway point reached!"')
+    counter -= 1
