@@ -19,3 +19,14 @@ print("Integer addition: Adding text_value_as_int (33) to int_value (15):", text
 
 # Adding (concatenating) text values
 print("Text addition: Adding text_value (33) to int_value_as_text (15):", text_value + int_value_as_text)
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):  # Abstract base class
+    @abstractmethod
+    def make_sound(self):
+        pass
+
+class Dog(Animal):  # Concrete subclass
+    def make_sound(self):
+        return "Bark!"
