@@ -77,3 +77,9 @@ display_color_works(shirt_color)
 
 # The shirt_color variable is not in scope in this function
 display_color_failure(shirt_color)
+
+
+from menus import display_menu
+
+user_choice = display_menu()
+print(user_choice)
