@@ -18,14 +18,19 @@ def calculate_diameter_circle(radius: float) -> float:
     return radius * 2
 
 
-def happy_birthday(age, name):
-    """Return happy birthday's congratulation based on the age and name.
+import random
 
-    Args:
-        age (int): how old is person
-        name (str): the person's name
+
+def get_lucky_number():
+    """return random number
+
+    Returns:
+        float: random number
     """
-    print(f"Happy Birthday {name} and congratulations on turning  {age} years old!")
+    lucky_num = random.randint(1, 100)
+    return lucky_num
 
 
-print(happy_birthday(22, "Nora"))
+lucky_number = get_lucky_number()
+
+print("Your lucky number is:", lucky_number)
