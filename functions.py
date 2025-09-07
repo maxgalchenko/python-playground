@@ -17,8 +17,12 @@ def calculate_diameter_circle(radius: float) -> float:
         return -1
     return radius * 2
 
-print(calculate_diameter_circle(7))
-print(calculate_diameter_circle(2.5))
-print(calculate_diameter_circle(0))
-print(calculate_diameter_circle(-3))
-print(calculate_diameter_circle(1000000))
+
+def happy_birthday():
+    print("Happy Birthday!")
+
+
+
+print(happy_birthday())
+
+
