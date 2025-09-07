@@ -59,10 +59,21 @@ def calc_sale_price(amount, member):
 # Example price (already provided)
 full_price = 150.50
 
-# Call function for members
-member_price = calc_sale_price(full_price, True)
-print("Member price:", member_price)
 
-# Call function for non-members
-non_member_price = calc_sale_price(full_price, False)
-print("Non-member price:", non_member_price)
+shirt_color = "Pink"
+
+
+def display_color_works(shirt_color):
+    print("First shirt color is:", shirt_color)
+
+
+def display_color_failure(shirt_color):
+    # Try to access 'color' directly (this will cause an error)
+    print("Your shirt color is:", shirt_color)
+
+
+# The shirt_color variable is in scope in this function
+display_color_works(shirt_color)
+
+# The shirt_color variable is not in scope in this function
+display_color_failure(shirt_color)
