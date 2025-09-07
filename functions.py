@@ -18,11 +18,14 @@ def calculate_diameter_circle(radius: float) -> float:
     return radius * 2
 
 
-def happy_birthday():
-    print("Happy Birthday!")
+def happy_birthday(age, name):
+    """Return happy birthday's congratulation based on the age and name.
+
+    Args:
+        age (int): how old is person
+        name (str): the person's name
+    """
+    print(f"Happy Birthday {name} and congratulations on turning  {age} years old!")
 
 
-
-print(happy_birthday())
-
-
+print(happy_birthday(22, "Nora"))
