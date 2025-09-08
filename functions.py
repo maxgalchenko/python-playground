@@ -1,85 +1,42 @@
-def calculate_diameter_circle(radius: float) -> float:
-    """Function that calculates the diameter or circle
+def celsius_to_fahrenheit(celsius: float) -> float:
+    """Takes a temperature in Celsius and converts it to Fahrenheit.
 
     Args:
-      radius (float): The radius of the circle.
+        celsius (float): temperature in celsius
 
     Returns:
-      float: Diameter of the circle. Will return -1 if radius is negative.
-
-    Raises:
-
-    Example:
-      >>> calculate_diameter_circle (3.2)
-      6.4
+        float: temperature in fahrenheit
     """
-    if radius < 0:
-        return -1
-    return radius * 2
+    return (celsius * 9 / 5) + 32
 
 
-import random
-
-
-def get_lucky_number():
-    """return random number
-
-    Returns:
-        float: random number
-    """
-    lucky_num = random.randint(1, 100)
-    return lucky_num
-
-
-lucky_number = get_lucky_number()
-
-
-def calc_sale_price(amount, member):
-    """_summary_
+def fahrenheit_to_celsius(fahrenheit: float) -> float:
+    """Takes a temperature in Fahrenheit and converts it to Celsius.
 
     Args:
-        amount (float): price without sale
-        member (boolean): if client is member
+        fahrenheit (float): temperature in fahrenheit
 
     Returns:
-        float: sale price
+        float: temperature in celsius
     """
-    if member:
-        # Members receive a 15% discount (0.15)
-        amount = amount - (amount * 0.15)
+    return (fahrenheit - 32) * 5 / 9
+
+
+from typing import Literal
+
+
+def convert_temperature(temperature: float, unit: Literal["F", "C"]) -> float:
+    if unit == "F":
+        return fahrenheit_to_celsius(temperature)
     else:
-        # Non-members get a 5% discount (0.05)
-        amount = amount - (amount * 0.05)
-
-        amount = round(amount, 2)
-    amount = round(amount, 2)
-    return amount
+        return celsius_to_fahrenheit(temperature)
 
 
-# Example price (already provided)
-full_price = 150.50
+temperature_c = 25
+temperature_f = 77
 
+converted_f = convert_temperature(temperature_c, "C")
+converted_c = convert_temperature(temperature_f, "F")
 
-shirt_color = "Pink"
-
-
-def display_color_works(shirt_color):
-    print("First shirt color is:", shirt_color)
-
-
-def display_color_failure(shirt_color):
-    # Try to access 'color' directly (this will cause an error)
-    print("Your shirt color is:", shirt_color)
-
-
-# The shirt_color variable is in scope in this function
-display_color_works(shirt_color)
-
-# The shirt_color variable is not in scope in this function
-display_color_failure(shirt_color)
-
-
-from menus import display_menu
-
-user_choice = display_menu()
-print(user_choice)
+print(f"{temperature_c}°C is equal to {converted_f}°F")
+print(f"{temperature_f}°F is equal to {converted_c}°C")
