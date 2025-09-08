@@ -40,3 +40,17 @@ converted_c = convert_temperature(temperature_f, "F")
 
 print(f"{temperature_c}°C is equal to {converted_f}°F")
 print(f"{temperature_f}°F is equal to {converted_c}°C")
+
+
+from typing import Union
+
+
+def flexible_function(*args: Union[int, str], **kwargs: Union[int, str]):
+    print("Positional arguments:", args)
+    print("Keyword arguments:", kwargs)
+
+
+flexible_function(1, 2, 3, name="Alice", age=30)
+
+
+
