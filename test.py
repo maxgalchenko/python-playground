@@ -1,4 +1,10 @@
-from math_utils import some_var, some_var2
+shopping_cart: list[str] = []
 
-print(some_var)
-print(some_var2)
+shopping_cart.append("apple")
+shopping_cart.append("banana")
+shopping_cart.append("milk")
+
+
+print("Shopping Cart:")
+for item in shopping_cart:
+  print(item)
