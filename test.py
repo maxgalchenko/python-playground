@@ -1,21 +1,18 @@
-shopping_cart: list[str] = []
-
-shopping_cart.append("apple")
-shopping_cart.append("banana")
-shopping_cart.append("milk")
-
-
-print("Shopping Cart:")
-for item in shopping_cart:
-    print(item)
+def read_file_contents(file_path):
+    try:
+        with open(file_path, "r") as file:
+            print(file)
+    except FileNotFoundError:
+        print(f"File is not found. E:{file_path}")
 
 
-l = [1, 2, 3, 4, 5]
-l.clear()
-print(l)
-
-diction = {12: 123}
-
-print(diction.get(123321321, 123))
+file = "/Users/Example/Documents/my_file.txt"
+read_file_contents(file)
 
 
+def read_file_contents(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            print(file.read())
+    except FileNotFoundError:
+        print(f"Error: File not found - {file_path}")
