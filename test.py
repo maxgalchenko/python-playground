@@ -1,18 +1,11 @@
-def read_file_contents(file_path):
-    try:
-        with open(file_path, "r") as file:
-            print(file)
-    except FileNotFoundError:
-        print(f"File is not found. E:{file_path}")
+import pytest
 
 
-file = "/Users/Example/Documents/my_file.txt"
-read_file_contents(file)
-
-
-def read_file_contents(file_path):
-    try:
-        with open(file_path, 'r') as file:
-            print(file.read())
-    except FileNotFoundError:
-        print(f"Error: File not found - {file_path}")
+def test_contains_five():
+    """
+    Tests the 'contains_five' function.
+    """
+    # Example list for testing
+    my_list = [1, 3, 5, 7, 9]
+    assert 5 in mylist
+    # Write your Python assert below

@@ -16,6 +16,7 @@ dependencies = [
     "datetime (>=5.5,<6.0)",
     "scipy (>=1.16.1,<2.0.0)",
     "statsmodels (>=0.14.5,<0.15.0)",
+    "pytest (>=8.4.2,<9.0.0)",
 ]
 
 [tool.poetry]
